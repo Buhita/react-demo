@@ -1,0 +1,104 @@
+Extensiones VSCODE|
+******************
+sumneko.lua
+esbenp.prettier-vscode
+trixnz.vscode-lua
+vscode.json-language-features
+kisstkondoros.vscode-gutter-preview
+vscode.typescript-language-features
+formulahendry.auto-rename-tag
+ionutvmi.path-autocomplete
+pixelbyte-studios.pixelbyte-love2d
+Koihik.vscode-lua-format
+formulahendry.auto-close-tag
+
+mrmlnc.vscode-duplicate
+TTOOWA.in-your-face-incredible
+pixelwar.love2dsnippets
+pixelbyte-studios.pixelbyte-love2d
+
+arthurdiegoo.great-dreamer
+xgr-development.zaeri
+
+lwz7512.love2d-made-easy
+---------------------------------------------------------
+---------------------------------------------------------
+npm init -y
+
+Set-ExecutionPolicy RemoteSigned  
+Get-ExecutionPolicy 
+npm create vite@latest 
+npm install mysql
+
+---------------------------------------------------------
+---------------------------------------------------------
+MySQL|
+------
+\sql
+\connect root@localhost
+show databases;
+use world;
+show tables;
+select * from city;
+
+\sql
+\c root@localhost
+\js
+\use world
+db. --> tab tab
+table = db.getTable("City")
+table. --> tab tab
+table.select()
+table.insert().help()
+table.insert("ID","Name","CountryCode","District","Population").values(4080,"Rancagua","Libertador",1)
+---------------------------------------------------------
+---------------------------------------------------------
+CMD|
+----
+cd
+cd..
+dir
+ls
+mkdir
+dotnet --version
+---------------------------------------------------------
+---------------------------------------------------------
+React|
+----------------------
+
+npm create vite@latest react-demo -- --template react
+explorer .
+npm install
+npm run dev
+(CTRL + C para cerrar el servidor)
+code .
+
+Tailwindcss...
+......................
+npm install tailwindcss @tailwindcss/vite
+vite.config.css-> añadir import tailwindcss from '@tailwindcss/vite'
+	y
+	, tailwindcss()
+index.css -> añadir @import "tailwindcss";
+cerrar y abrir vscode
+......................
+vscode: ctrl + espacio: sugerencias
+		ctrl + }: comentar
+
+---------------------------------------------------------
+---------------------------------------------------------
+Json-server|
+------------
+npm install -g json-server
+json-server --watch db.json --port 3000
+
+Usar postman...
+Para POST o PUT:
+	Headers- Key:Content-Type Value: application/json
+	Body- raw
+	{
+		"id": 4, "name": "Bob"
+	}
+Para GET y DELETE:
+	Headers: ninguno
+	Body: none 

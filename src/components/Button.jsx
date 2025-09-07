@@ -15,9 +15,9 @@ export default function Button({texto,funcionalidad})
   // }
 
   return (
-    <div>
+    <div className='flex justify-center items-center'>
       <button onClick={() => funcionalidad()} 
-        className='bg-blue-950 text-3xl text-white p-6 m-4 rounded-lg'>{texto}</button>
+        className='bg-blue-950 text-1xl text-white px-4 py-2 m-3 rounded-lg'>{texto}</button>
     </div>
 
     // <div>

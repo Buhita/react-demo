@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* text-align: center; */
+  background: #A770EF;
+  background: -webkit-linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);  /* Chrome y Safari antiguos */
+  background: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);
+}
+
+#titulo {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    margin: 1rem;
+    color: black;
+}
