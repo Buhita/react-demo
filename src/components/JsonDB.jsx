@@ -1,27 +1,34 @@
 import {useState} from 'react'
 import Button from './Button'
 
+async function obtenerUsuarios() {
+      try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/users")
+        const users = await response.json()
+
+        console.log("--------------------------")
+        users.forEach(user => console.log(user.name))
+        console.log("--------------------------")
+      } catch (error) {
+        console.log("Error: ",error)
+      }
+}
 
 function JsonDB() {
 
   const JsonPlaceholder = () => fetch("https://jsonplaceholder.typicode.com/users")
       .then(response => response.json())
       .then(users => {
+        console.log("--------------------------")
         users.forEach(user => console.log(user.name))
+        console.log("--------------------------")
+
+        let users_string = ""
+        users.forEach(user => users_string += user.name + "\n")
+        alert(users_string)
+
       })
-      .catch(error => console.log(error))
-
-    async function obtenerUsuarios() {
-      try {
-        const response = await fetch("https://jsonplaceholder.typicode.com/users")
-        const users = await response.json()
-        users.forEach(user => console.log(user.name))
-      } catch (error) {
-        console.log("Error: ",error)
-      }
-    }
-
-    obtenerUsuarios()
+      .catch(error => console.log(error))    
 
   return (
     <>
@@ -32,5 +39,7 @@ function JsonDB() {
     </>
   )
 }
+
+obtenerUsuarios()
 
 export default JsonDB
